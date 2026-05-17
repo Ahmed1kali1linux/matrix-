@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cyber System</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="bg-effect"></div>
+
+  <!-- LOGIN -->
+
+  <div class="login-box" id="loginBox">
+
+    <h1>ACCESS SYSTEM</h1>
+
+    <input type="text" id="username" placeholder="Username">
+
+    <input type="password" id="password" placeholder="Password">
+
+    <button id="loginBtn">
+
+      LOGIN
+
+    </button>
+
+    <p id="errorText"></p>
+
+  </div>
+
+  <!-- CLOUD -->
+
+  <div class="cloud-page hidden" id="cloudPage">
+
+    <div class="cloud" id="cloud">
+
+      <span>SYSTEM</span>
+
+    </div>
+
+    <p class="click-text">
+
+      SYSTEM READY
+
+    </p>
+
+    <button class="start-btn" id="startBtn">
+
+      START SYSTEM
+
+    </button>
+
+  </div>
+
+  <!-- MAIN -->
+
+  <div class="main-page hidden" id="mainPage">
+
+    <div class="top-bar">
+
+      <div class="logo-icon">⚡</div>
+
+      <div class="welcome-text">
+
+        Welcome ENG » Ahmed Hamed «
+
+      </div>
+
+    </div>
+
+    <div class="menu-box">
+
+      <button class="menu-btn" id="scanBtn">
+
+        SCAN SYSTEM
+
+      </button>
+
+      <button class="menu-btn" id="filesBtn">
+
+        VIEW FILES
+
+      </button>
+
+      <button class="menu-btn" id="networkBtn">
+
+        NETWORK TERMINAL
+
+      </button>
+
+      <button class="menu-btn" id="securityBtn">
+
+        SECURITY PANEL
+
+      </button>
+
+    </div>
+
+    <button class="logout-btn" onclick="logout()">
+
+      LOG OUT
+
+    </button>
+
+  </div>
+
+  <!-- SCAN -->
+
+  <div class="panel hidden" id="qrPage">
+
+    <button class="back-btn" onclick="goBack()">
+
+      ← BACK
+
+    </button>
+
+    <h2>SCAN SYSTEM</h2>
+
+    <div class="gif-box">
+
+      <img src="image/123456.gif" alt="scan gif">
+
+    </div>
+
+  </div>
+
+  <!-- FILES -->
+
+  <div class="panel hidden" id="filesPage">
+
+    <button class="back-btn" onclick="goBack()">
+
+      ← BACK
+
+    </button>
+
+    <h2>FILES</h2>
+
+    <div class="file-list">
+
+      <div>📁 system.exe</div>
+
+      <div>📁 network.dll</div>
+
+      <div>📁 user_access.sys</div>
+
+      <div>📁 security.ai</div>
+
+      <div>📁 firewall.cfg</div>
+
+      <div>📁 engine_core.sys</div>
+
+    </div>
+
+  </div>
+
+  <!<!-- NETWORK TERMINAL -->
+
+<div class="panel hidden" id="networkPage">
+
+  <button class="back-btn" onclick="goBack()">
+
+    ← BACK
+
+  </button>
+
+  <h2>NETWORK TERMINAL</h2>
+
+  <div class="network-layout">
+
+    <!-- LEFT SIDE -->
+
+    <div class="network-stats">
+
+      <div class="stat-box">
+
+        <span>SIGNAL</span>
+
+        <div class="signal-bars">
+
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+
+        </div>
+
+      </div>
+
+      <div class="stat-box">
+
+        <span>STATUS</span>
+
+        <p>CONNECTED ✔</p>
+
+      </div>
+
+      <div class="stat-box">
+
+        <span>PING</span>
+
+        <div class="progress">
+
+          <div class="progress-fill"></div>
+
+        </div>
+
+      </div>
+
+      <div class="stat-box">
+
+        <span>DATABASE</span>
+
+        <div class="progress">
+
+          <div class="progress-fill db"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="terminal-box">
+
+      <div id="terminalText"></div>
+
+    </div>
+
+  </div>
+
+</div>
+
+  <!-- SECURITY -->
+
+  <div class="panel hidden" id="securityPage">
+
+    <button class="back-btn" onclick="goBack()">
+
+      ← BACK
+
+    </button>
+
+    <h2>SECURITY PANEL</h2>
+
+    <div class="security-box">
+
+      <p>✔ FIREWALL ACTIVE</p>
+
+      <p>✔ SYSTEM SECURED</p>
+
+      <p>✔ DATABASE PROTECTED</p>
+
+      <div class="timer" id="timer">
+
+        00:00:00
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
